@@ -1,5 +1,5 @@
-import { connect } from '@/utils/db/dbConfig'
-import User from '@/utils/models/auth'
+import { connect } from '@/utils/db/dbconnect'
+import User from '@/utils/models/User'
 import bcryptjs from 'bcryptjs'
 import { NextResponse, NextRequest } from 'next/server'
 
