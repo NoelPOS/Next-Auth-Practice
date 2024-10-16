@@ -1,29 +1,25 @@
-import AuthProvider from "@/components/Provider";
-import "./globals.css";
-import type { Metadata } from "next";
-import { Mulish } from "next/font/google";
+import AuthProvider from '@/components/Provider'
+import './globals.css'
+import type { Metadata } from 'next'
+import { Mulish } from 'next/font/google'
 
-const mulish = Mulish({ subsets: ["latin"] });
+const mulish = Mulish({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: "Solve It Out",
-  description: "Next Authentication",
-};
+  title: 'Next Authentication',
+  description: 'Next.js authentication with NextAuth.js',
+}
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body
-        suppressContentEditableWarning
-        suppressHydrationWarning
-        className={mulish.className}
-      >
+    <html lang='en'>
+      <body>
         <AuthProvider>{children}</AuthProvider>
       </body>
     </html>
-  );
+  )
 }
